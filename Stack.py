@@ -9,10 +9,13 @@ class Stack:
         if not self.isEmpty():
             return self.items.pop()
         else:
-            return "Empty stack; nothing to pop.";
+            return "Empty stack; nothing to pop."
 
     def peek(self):
-        return self.items[len(self.items)-1]
+        if not self.isEmpty():
+            return self.items[len(self.items)-1]
+        else:
+            return "Empty stack; nothing to peek at."
 
     def size(self):
         return len(self.items)
