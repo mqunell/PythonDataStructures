@@ -6,7 +6,10 @@ class Stack:
         self.items.append(item)
 
     def pop(self):
-        return self.items.pop()
+        if not self.isEmpty():
+            return self.items.pop()
+        else:
+            return "Empty stack; nothing to pop.";
 
     def peek(self):
         return self.items[len(self.items)-1]
