@@ -19,6 +19,9 @@ class Stack:
 
     def __str__(self):
         if self.isEmpty():
-            return "Empty Stack"
+            return "Empty stack."
         else:
-            return "Bottom -> " + str(self.items) + " -> Top"
+            result = ""
+            for s in self.items:
+                result += str(s) + ", "
+            return "Bottom -> %s -> Top" % result[0:-2]
