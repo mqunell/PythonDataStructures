@@ -6,25 +6,25 @@ class Stack:
         self.items.append(item)
 
     def pop(self):
-        if not self.isEmpty():
-            return self.items.pop()
-        else:
+        if self.is_empty():
             return "Empty stack; nothing to pop."
+        else:
+            return self.items.pop()
 
     def peek(self):
-        if not self.isEmpty():
-            return self.items[len(self.items)-1]
-        else:
+        if self.is_empty():
             return "Empty stack; nothing to peek at."
+        else:
+            return self.items[len(self.items)-1]
 
     def size(self):
         return len(self.items)
 
-    def isEmpty(self):
+    def is_empty(self):
         return self.items == []
 
     def __str__(self):
-        if self.isEmpty():
+        if self.is_empty():
             return "Empty stack."
         else:
             result = ""

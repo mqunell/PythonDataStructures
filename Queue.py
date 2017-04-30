@@ -3,7 +3,7 @@ class Queue:
         self.items = []
 
     def add(self, item):
-        if self.isEmpty():
+        if self.is_empty():
             self.items.append(item)
         else:
             # Append the last item to the end
@@ -17,7 +17,7 @@ class Queue:
             self.items[0] = item
 
     def remove(self):
-        if self.isEmpty():
+        if self.is_empty():
             return "Empty queue; nothing to remove."
         else:
             temp = self.items[-1]
@@ -25,7 +25,7 @@ class Queue:
             return temp
 
     def element(self):
-        if self.isEmpty():
+        if self.is_empty():
             return "Empty queue; nothing to element."
         else:
             return self.items[-1]
@@ -33,11 +33,11 @@ class Queue:
     def size(self):
         return len(self.items)
 
-    def isEmpty(self):
+    def is_empty(self):
         return self.items == []
 
     def __str__(self):
-        if self.isEmpty():
+        if self.is_empty():
             return "Empty queue."
         else:
             result = ""
