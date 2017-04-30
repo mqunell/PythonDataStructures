@@ -15,10 +15,11 @@ print("Attempting to peek again: %s" % str(s.peek()))'''
 from Queue import Queue
 
 q = Queue()
+
 q.add("first")
 q.add("second")
-q.add("third")
-q.add("fourth")
-q.add("fifth")
-
+print(q)
+q.remove()
+print(q)
+q.remove()
 print(q)
