@@ -1,4 +1,4 @@
-from Stack import Stack
+'''from Stack import Stack
 
 s = Stack()
 
@@ -10,4 +10,15 @@ print("Peeking at the stack: %s" % str(s.peek()))
 print("Popping %s off of the stack." % str(s.pop()))
 print("Peeking at the stack: %s" % str(s.peek()))
 print("Popping %s off of the stack." % str(s.pop()))
-print("Attempting to peek again: %s" % str(s.peek()))
+print("Attempting to peek again: %s" % str(s.peek()))'''
+
+from Queue import Queue
+
+q = Queue()
+q.add("first")
+q.add("second")
+q.add("third")
+q.add("fourth")
+q.add("fifth")
+
+print(q)
