@@ -1,25 +1,11 @@
-'''from Stack import Stack
+from LinkedList import LinkedList
 
-s = Stack()
-
-print("Pushing 1 and 2 onto the stack.")
-s.push(1)
-s.push(2)
-
-print("Peeking at the stack: %s" % str(s.peek()))
-print("Popping %s off of the stack." % str(s.pop()))
-print("Peeking at the stack: %s" % str(s.peek()))
-print("Popping %s off of the stack." % str(s.pop()))
-print("Attempting to peek again: %s" % str(s.peek()))'''
-
-from Queue import Queue
-
-q = Queue()
-
-q.add("first")
-q.add("second")
-print(q)
-q.remove()
-print(q)
-q.remove()
-print(q)
+ll = LinkedList()
+ll.insert(1)
+ll.insert(2)
+print("LinkedList after inserts:", ll)
+ll.remove(1)
+ll.remove(2)
+ll.remove(5)
+ll.remove(1)
+print("LinkedList after removes:", ll)
