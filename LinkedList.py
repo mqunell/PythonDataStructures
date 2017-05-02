@@ -1,5 +1,6 @@
 from ListNode import ListNode
 
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -14,17 +15,17 @@ class LinkedList:
             temp.next = ListNode(data)
 
     def remove(self, d):
-        if self.head is None:
-            " do nothing "
-        elif self.head.data == d:
-            self.head = self.head.next
-        else:
-            temp = self.head
-            while temp.next is not None:
-                if temp.next.data == d:
-                    temp.next = temp.next.next
-                    break
-                temp = temp.next
+        if self.head is not None:
+            if self.head.data == d:
+                self.head = self.head.next
+            else:
+                temp = self.head
+                while temp.next is not None:
+                    if temp.next.data == d:
+                        temp.next = temp.next.next
+                        break
+                    else:
+                        temp = temp.next
 
     def __str__(self):
         result = ""
