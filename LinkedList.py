@@ -27,6 +27,20 @@ class LinkedList:
                     else:
                         temp = temp.next
 
+    def remove_all(self, d):
+        # Removes leading d's by moving self.head
+        while self.head is not None and self.head.data == d:
+            self.head = self.head.next
+
+        # Removes following d's by traversing the LinkedList
+        if self.head is not None:
+            temp = self.head
+            while temp.next is not None:
+                if temp.next.data == d:
+                    temp.next = temp.next.next
+                else:
+                    temp = temp.next
+
     def __str__(self):
         result = ""
 
