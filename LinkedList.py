@@ -64,6 +64,16 @@ class LinkedList:
     def is_empty(self):
         return self.head is None
 
+    def to_list(self):
+        result = []
+
+        temp = self.head
+        while temp is not None:
+            result.append(temp.data)
+            temp = temp.next
+
+        return result
+
     def __str__(self):
         result = ""
 
