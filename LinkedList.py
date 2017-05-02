@@ -41,6 +41,29 @@ class LinkedList:
                 else:
                     temp = temp.next
 
+    def contains(self, d):
+        temp = self.head
+        while temp is not None:
+            if temp.data == d:
+                return True
+            else:
+                temp = temp.next
+
+        return False
+
+    def size(self):
+        count = 0
+
+        temp = self.head
+        while temp is not None:
+            count += 1
+            temp = temp.next
+
+        return count
+
+    def is_empty(self):
+        return self.head is None
+
     def __str__(self):
         result = ""
 
