@@ -17,6 +17,9 @@ class Stack:
         else:
             return self.items[len(self.items)-1]
 
+    def contains(self, d):
+        return self.items.__contains__(d)
+
     def size(self):
         return len(self.items)
 

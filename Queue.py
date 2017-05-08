@@ -30,6 +30,9 @@ class Queue:
         else:
             return self.items[-1]
 
+    def contains(self, d):
+        return self.items.__contains__(d)
+
     def size(self):
         return len(self.items)
 

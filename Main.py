@@ -1,28 +1,25 @@
-from LinkedList import LinkedList
+from Stack import Stack
+from Queue import Queue
 
-ll = LinkedList()
-test_value = 2
+s = Stack()
+s.push(1)
+s.push(2)
+s.push(3)
 
-print("LL:", ll)
-print(str(ll.to_list()))
-print("size: %d, is_empty: %r, contains %d: %r\n" % (ll.size(), ll.is_empty(), test_value, ll.contains(test_value)))
+q = Queue()
+q.add(1)
+q.add(2)
+q.add(3)
 
-ll.insert(1)
-print("LL:", ll)
-print(str(ll.to_list()))
-print("size: %d, is_empty: %r, contains %d: %r\n" % (ll.size(), ll.is_empty(), test_value, ll.contains(test_value)))
+print("Stack 'contains' tests: %r, %r, %r, %r" % (s.contains(0), s.contains(1), s.contains(2), s.contains(3)))
+print("Queue 'contains' tests: %r, %r, %r, %r" % (q.contains(0), q.contains(1), q.contains(2), q.contains(3)))
 
-ll.insert(2)
-ll.insert(3)
-ll.insert(4)
-ll.insert(1)
-ll.remove(2)
-ll.insert(2)
-print("LL:", ll)
-print(str(ll.to_list()))
-print("size: %d, is_empty: %r, contains %d: %r\n" % (ll.size(), ll.is_empty(), test_value, ll.contains(test_value)))
+s.pop()
+s.pop()
+s.pop()
+print("Empty stack 'contains' test: %r" % s.contains(4))
 
-ll.remove_all(1)
-print("LL:", ll)
-print(str(ll.to_list()))
-print("size: %d, is_empty: %r, contains %d: %r\n" % (ll.size(), ll.is_empty(), test_value, ll.contains(test_value)))
+q.remove()
+q.remove()
+q.remove()
+print("Empty queue 'contains' test: %r" % q.contains(4))
