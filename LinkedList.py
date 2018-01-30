@@ -9,7 +9,21 @@ class LinkedList:
 
         self.head = None
 
-    def insert(self, data):
+    def insert_start(self, data):
+        """
+        Inserts <data> at the start of the LinkedList.
+
+        :param data: The value being added
+        """
+
+        if self.head is None:
+            self.head = ListNode(data)
+        else:
+            temp = self.head
+            self.head = ListNode(data)
+            self.head.next = temp
+
+    def insert_end(self, data):
         """
         Inserts <data> at the end of the LinkedList.
         
